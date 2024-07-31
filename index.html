@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    
+        }
+        .dashboard {
+            background-color: #aabed7;
+            width: 100%;  
+            height: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+        .dashboard h1 {
+            grid-column: span 3;
+            text-align: start;
+            color: #4CAF50;
+            font-size: 2em;
+            color: #ffffff;
+        }
+        .card {
+            background-color: #2e5789;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+        .number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #eff1f6;
+            text-align: center;
+            padding: 0%;
+            margin: 0%;
+        }
+        .bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .bar {
+            height: 20px;
+            border-radius: 5px;
+        }
+        .bar.orange {
+            background-color: #ff9800;
+        }
+        .bar.blue {
+            background-color: #2196f3;  
+        }
+        .bar.gray {
+            background-color: #9e9e9e;
+        }
+        .circle-img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+        .horizantal-img {
+            width: 650px;
+            display: block;
+            margin: 10px auto;
+        }
+        .card1 {
+            background-color: #2e5789;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350.227px;
+            color: #ffffff;
+        }
+        .card3 {
+            background-color: #2e5789;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            height: 520.227px;
+        }
+        .card2 {
+            background-color: #2e5789;
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            justify-content: start;
+            padding: 10px;
+            color: #ffffff;
+            grid-column: span 2;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1 style="font-size: 40px; text-align: center; color: #f7f8fb;">Battery Dashboard</h1>
+        <div class="card">
+            <a href="Citywisebreakup.html" style="text-decoration: none;">
+            <h2>Number of Deployed Batteries &nbsp;&nbsp;&nbsp; </h2>
+            </a>
+            <h4 style="color: #f3f3f3;"><span>Batteries on Field  &nbsp;&nbsp;&nbsp; 40,000  (98.77%)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Batteries not in Field</span><span style="color: rgb(239, 78, 56);">   &nbsp;&nbsp;  &nbsp; 500 (1.23%)</span></h4>
+            <img src="bat.png" alt="Batteries in Swap" class="circle-img">
+            <h2>  40,500</h2>
+        </div>
+        <div class="card1">
+            <a href="Activebatteryswap.html" style="text-decoration: none; color: #f3f3f3;"> 
+                <h2>Active Batteries in Swap </h2>
+            </a>
+            <h4 style="color: #f3f3f3;"><span>Active   39,000  (98.00%) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inactive </span><span style="color: rgb(239, 78, 56);"> 1,000 (02.00%)</span></h4>
+            <img src="bat2.png" alt="Batteries in Swap" class="circle-img">
+            <h2>  40,000</h2>
+        </div>
+        <div class="card1">
+            <h2>Qurantine Batteries  </h2>
+            <h4 style="color: gold;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Qurantine  100 (0.25%)</h4>
+            <img src="bat1.png" alt="Quarantined Batteries" class="circle-img">
+            <h2>  40,000</h2>
+        </div>
+        <div class="card">
+            <div>
+                <h2 style="align-items: center;justify-content: center; ">Yearly Deployed Batteries </h2>
+            </div>
+            <div>
+                <h3 style="color: #f3f3f3;">
+                    Type 09 & 11 &nbsp;&nbsp;&nbsp;<span class="number" style="color: #e39115;">16,539</span>
+                    &nbsp;&nbsp;&nbsp;
+                    Type 12 &nbsp;&nbsp;&nbsp;<span class="number" style="color: #4CAF50;">15,860</span>
+                    &nbsp;&nbsp;&nbsp;
+                    Type 13 &nbsp;&nbsp;&nbsp;<span class="number" style="color: #ffeb3b;">8,197</span>
+                </h3>
+            </div>
+            <img src="Chart2.png" alt="Quarantined Batteries" class="horizantal-img">
+        </div>
+        <div class="card2" style="grid-column: span 2;">
+            <a href="Batteryinswapbutnotiu.html" style="text-decoration: none; color: #ffffff;">
+            <div class="row">
+                <h4>Battery in Swap but TIU Not Communicating <span class="number" style="float: right;">40(3.00%)</span></h4>
+                <div class="bar-container"><div class="bar orange" style="width: 2%;"></div></div>
+            </div>
+            </a>
+            <div class="row">
+                <a href="SecondaryQuarantine.html" style="text-decoration: none; color: #eff1f6;">
+                    <h4>Quarantine Battery Report <span class="number" style="float: right;">100 (0.25)%</span></h4>
+                    <div class="bar-container"><div class="bar blue" style="width: 5%;"></div></div>
+                </a>
+            </div>
+            <div class="row">
+                <a href="Firmware.html" style="text-decoration: none; color: #eff1f6;">
+                    <h4>Battery Firmware Upgradation <span class="number" style="float: right;">6,663 (16.70%)</span></h4>
+                    <div class="bar-container"><div class="bar orange" style="width: 40%;"></div></div>
+                </a>
+            </div>
+            <div class="row">
+                <a href="Batterycriticalalerts.html" style="text-decoration: none; color: #eff1f6;">
+                    <h4>Battery Critical alerts <span class="number" style="float: right;">400 (1.00)%</span></h4>
+                    <div class="bar-container"><div class="bar blue" style="width: 15%;"></div></div>
+                </a>
+            </div>
+            <div class="row">
+                <a href="serviceappbuunlock.html" style="text-decoration: none; color: #eff1f6;" >
+                    <h4>BP Unlock Status <span class="number" style="float: right;">60 (0.15%)</span></h4>
+                    <div class="bar-container"><div class="bar orange" style="width: 8%;"></div></div>
+                </a>
+            </div>
+            <div class="row">
+                <a href="Capacityteststatus.html" style="text-decoration: none; color: #eff1f6;">
+                    <h4>Battery Capacity Due report <span class="number" style="float: right;">100 (0.25%)</span></h4>
+                </a>
+                <div class="bar-container"><div class="bar blue" style="width: 5%;"></div></div>
+            </div>
+            <div class="row">
+                <a href="BatteryServiceCharge.html" style="text-decoration: none; color: #eff1f6;">
+                    <h4>Battery Service Time <span class="number" style="float: right;"> </span></h4>
+                    <div class="bar-container"><div class="bar orange" style="width: 100%;"></div></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
