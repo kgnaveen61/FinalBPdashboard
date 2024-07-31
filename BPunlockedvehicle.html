@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Unlock Status Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .maindashboard-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .header .button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .header .right {
+            display: flex;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #7eb5ec;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <div class="right">
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+    <div class="section-title">Vehicle Unlock Status</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Activity Start Date</th>
+                <th>Activity End Date</th>
+                <th>Transaction ID</th>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>App Name</th>
+                <th>User Activity</th>
+                <th>App Version</th>
+                <th>Status</th>
+                <th>VIN ID</th>
+                <th>BP ID</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024-07-25 12:15:11+00:00</td>
+                <td>2024-07-25 12:15:11+00:00</td>
+                <td>9f33652f-2492-451b-b6e9-1d6ca3a37dee</td>
+                <td>9345504534</td>
+                <td>Name not found</td>
+                <td>Agent_App</td>
+                <td>User Not found</td>
+                <td>5.9.1</td>
+                <td>Failure</td>
+                <td>M2FNUCB10R19D0319</td>
+                <td>INSMOMAH0107C244111</td>
+                <td>12.93724728</td>
+                <td>77.60697174</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:11:33+00:00</td>
+                <td>2024-07-25 12:11:33+00:00</td>
+                <td>ecd6b657-cd96-4b59-9a82-0518cca0765a</td>
+                <td>9136737340</td>
+                <td>Ashish Shrikant Barbade - After Sales - Breakdown technician - Mumbai</td>
+                <td>Service_App</td>
+                <td>Login</td>
+                <td>5.3</td>
+                <td>Success</td>
+                <td>P51EPHRMC24001514</td>
+                <td>INSMOMAH0207H1262912</td>
+                <td>28.43313217</td>
+                <td>77.0865097</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:13:22+00:00</td>
+                <td>2024-07-25 12:13:22+00:00</td>
+                <td>265ead0b-e404-47cd-b0f1-0fcb55b7b9d4</td>
+                <td>7338178827</td>
+                <td>Subham</td>
+                <td>Agent_App</td>
+                <td>Session Expiry</td>
+                <td>5.3</td>
+                <td>Success</td>
+                <td>MD9HAPXF4ER710060</td>
+                <td>NSMOMAH8605H0502011</td>
+                <td>12.974833</td>
+                <td>77.51301</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:12:04+00:00</td>
+                <td>2024-07-25 12:12:04+00:00</td>
+                <td>9746775c-3517-4503-ad76-3da45e9b1b12</td>
+                <td>9365750113</td>
+                <td>Bahauddin  - After Sales - ERT driver - Bengaluru</td>
+                <td>Service_App</td>
+                <td>Vehicle KeyFOB Mapping</td>
+                <td>5.9</td>
+                <td>Success</td>
+                <td>MBX0007EFZC102062</td>
+                <td>INSMOMAH0207B054BE12</td>
+                <td>12.97770882</td>
+                <td>77.70690155</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:12:54+00:00</td>
+                <td>2024-07-25 12:12:54+00:00</td>
+                <td>cfad92ea-e179-468e-a4f2-269d20d5e560</td>
+                <td>9643215560</td>
+                <td>ABHILASH - AfterSales - Technician - Delhi</td>
+                <td>Service_App</td>
+                <td>Key Fob Read</td>
+                <td>5.9</td>
+                <td>Success</td>
+                <td>SESEAG0320230112J</td>
+                <td>NSMOMAD0108E0811214</td>
+                <td>12.836402</td>
+                <td>77.678025</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:14:26+00:00</td>
+                <td>2024-07-25 12:14:26+00:00</td>
+                <td>91ee3153-6a7c-4eed-83b8-160f1f520174</td>
+                <td>8851392436</td>
+                <td>Ravi Kumar-ERT North</td>
+                <td>Service_App</td>
+                <td>Login</td>
+                <td>5.3</td>
+                <td>Success</td>
+                <td>MD9HAPXF4ER710086</td>
+                <td>NSMOMAH1107L2879E13</td>
+                <td>28.43309975</td>
+                <td>77.08650208</td>
+            </tr>
+            <tr>
+                <td>2024-07-25 12:15:10+00:00</td>
+                <td>2024-07-25 12:15:10+00:00</td>
+                <td>c01a9fdb-65b5-4b6d-9c97-4d5ab83a34b1</td>
+                <td>9136737340</td>
+                <td>Ashish Shrikant Barbade - After Sales - Breakdown technician - Mumbai</td>
+                <td>Service_App</td>
+                <td>App Launch</td>
+                <td>5.9</td>
+                <td>Success</td>
+                <td>SESEAG06202200605</td>
+                <td>INSMOMAHA706L1247C1</td>
+                <td>28.658927</td>
+                <td>77.11009</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

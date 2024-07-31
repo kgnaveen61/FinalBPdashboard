@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            height: 100vh;
+            margin: 40px;
+            background-color: #3b5473;
+            flex-direction: column;
+        }
+        .chart {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .donut {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        .donut1 {
+            background: conic-gradient(rgb(216, 142, 4) 0% 90%, rgb(236, 7, 7) 60% 90%);
+        }
+        .donut2 {
+            background: conic-gradient(rgb(14, 211, 30) 0% 90%, rgb(236, 7, 7) 50% 80%) ;
+        }
+        .donut3 {
+            background: conic-gradient(rgb(239, 229, 84) 0% 90%, rgb(236, 7, 7) 70% 85%);
+        }
+        .donut::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .label {
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Change to space-between to push buttons to the sides */
+            margin-bottom: 20px;
+            width: 100%; /* Ensure full width */
+        }   
+
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .percentage {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(16, 15, 15);
+        }
+        .donut1 .percentage1 { top: 10%; left: 25%; font-size: 12px;} /* Yellow */
+        .donut1 .percentage3 { top: 85%; left: 40%; font-size: 12px; } /* Green */
+        
+        .donut2 .percentage1 { top: 10%; left: 25%; font-size: 12px; } /* Green */
+        .donut2 .percentage3 { top: 85%; left: 40%; font-size: 12px;} /* Yellow */
+        
+        .donut3 .percentage1 { top: 10%; left: 25%; font-size: 12px; } /* Yellow */
+        .donut3 .percentage3 { top: 85%; left: 35%; font-size: 12px;} /* Green */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <div class="right">
+            <a href="BPFirmwareddetails.html">
+                <button class="button">Data View </button>
+            </a>
+            <button class="button">Select TIU OR SCU/BMCU </button>
+            <button class="button">Graph View </button>
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+    <h1 style="color: rgb(236, 240, 243); text-align: center; font-size: 20px;">TIU Updated Status </h1>
+    <div class="chart">
+        <div class="donut donut1">
+            
+            <div class="percentage percentage1">1,160(2.90%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3">12,969 (32.43%)</div>
+        </div>
+        <div class="donut donut2">
+            
+            <div class="percentage percentage1">663(1.70%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3">15,200(38.00%)</div>   
+        </div>
+        <div class="donut donut3">
+            
+            <div class="percentage percentage1">10 (0.02%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3">8,202 (20.51%)</div>
+        </div>
+    </div>
+    
+
+    <h1 style="color: rgb(236, 240, 243); text-align: center; font-size: 20px;">SCU and BMCU Updated Status </h1>
+    <div class="chart">
+        <div class="donut donut1">
+            
+            <div class="percentage percentage1">2,101(5.30%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3">14,476(36.19%)</div>
+        </div>
+        <div class="donut donut2">
+            
+            <div class="percentage percentage1">1,687(4.20%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3"> 14,189(35.47%)</div>
+        </div>
+        <div class="donut donut3">
+            
+            <div class="percentage percentage1">1,042(2.62%)</div>
+            <div class="percentage percentage2"></div>
+            <div class="percentage percentage3"> 7,170(17.93%)</div>
+        </div>
+    </div>
+</body>
+</html>

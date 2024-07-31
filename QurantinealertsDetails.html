@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurantine BP details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-off {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-on {
+            background-color: #ffcccb;
+        }
+        .title-off {
+            background-color: #d3d3d3;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="SecondaryQuarantine.html">
+        <button class="maindashboard-button">Main Dashboard</button>
+    </a>
+    <div class="right">
+        <button class="button">Date Range from - to </button>
+        <button class="button">Export</button>
+    </div>
+</div>
+
+<div class="section-title title-on">Quarantie BP Details </div>
+<table>
+    <thead>
+        <tr>
+            <th>BP ID</th>
+            <th>Cycle Number</th>
+            <th>BP Type</th>
+            <th>Station Serial Number</th>
+            <th>Station Dock ID</th>
+            <th>Reported DateTime</th>
+            <th>Last Tiu TimeStamp</th>
+            <th>Zone</th>
+            <th>Q, No</th>
+            <th>Quarantine Reason</th>
+            <th>Ageing (Set Date)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>INSMOMAH1108A08BFA13</td>
+            <td>155</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00164</td>
+            <td>qis.xm.1.sdock.3.battery</td>
+            <td>7/18/2024 23:39</td>
+            <td>6/17/2024 1:39</td>
+            <td>Bengaluru</td>
+            <td>18</td>
+            <td>Mosfet</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1108A23E4113</td>
+            <td>182</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00483</td>
+            <td>qis.xm.1.sdock.4.battery</td>
+            <td>6/18/2024 22:40</td>
+            <td>6/21/2024 12:17</td>
+            <td>Bengaluru</td>
+            <td>25</td>
+            <td>Severe over battery +ve Temperature</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1108A23E5613</td>
+            <td>250</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00556</td>
+            <td>qis.xm.1.sdock.4.battery</td>
+            <td>6/18/2024 21:50</td>
+            <td>6/16/2024 9:45</td>
+            <td>Bengaluru</td>
+            <td>16</td>
+            <td>Battery negative temperature-open</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1308B0828713</td>
+            <td>145</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00555</td>
+            <td>qis.xm.1.sdock.11.battery</td>
+            <td>6/18/2024 21:32</td>
+            <td>6/21/2024 13:22</td>
+            <td>Bengaluru</td>
+            <td>3</td>
+            <td>Severe over voltage-cell1</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1108A08BCB13</td>
+            <td>184</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00294</td>
+            <td>qis.xm.1.sdock.1.battery</td>
+            <td>6/18/2024 21:32</td>
+            <td>6/18/2024 21:38</td>
+            <td>Delhi</td>
+            <td>5</td>
+            <td>DV-charge</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1108A24EA613</td>
+            <td>189</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00334</td>
+            <td>qis.xm.1.sdock.3.battery</td>
+            <td>6/17/2024 20:00</td>
+            <td>6/18/2024 18:36</td>
+            <td>Bengaluru</td>
+            <td>1</td>
+            <td>Severe under voltage-cell1</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1308A3005A13</td>
+            <td>179</td>
+            <td>Atlas Phase 2</td>
+            <td>WMQISXM1V1-00540</td>
+            <td>qis.xm.1.sdock.15.battery</td>
+            <td>6/18/2024 19:50</td>
+            <td>6/18/2024 19:29</td>
+            <td>Gurugram</td>
+            <td>36</td>
+            <td>Thermal runaway</td>
+            <td>40</td>
+        </tr>
+    </tbody>
+</table>
+  
+</body>
+</html>
+

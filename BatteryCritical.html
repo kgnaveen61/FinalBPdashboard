@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Alerts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-off {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-on {
+            background-color: #ffcccb;
+        }
+        .title-off {
+            background-color: #d3d3d3;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="index.html">
+        <button class="maindashboard-button">Main Dashboard</button>
+    </a>
+    <div class="right">
+        <button class="button">Date Range from - to </button>
+        <button class="button">Export</button>
+    </div>
+</div>
+
+<div class="section-title title-on">Battery Critical Alerts </div>
+<table>
+    <thead>
+        <tr>
+            <th>Battery ID</th>
+            <th>Alert Type</th>
+            <th>Zone</th>
+            <th>BP Family</th>
+            <th>State</th>
+            <th>vDock | Station ID dock</th>
+            <th>Vin/Station No</th>
+            <th>Vin Type</th>
+            <th>Business Type</th>
+            <th>Primary Fault Description</th>
+            <th>Quarantine Number</th>
+            <th>Quarantine Reasons</th>
+            <th>Cycle Number</th>
+            <th>Tiu Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>INSMOMAH1107L255C013</td>
+            <td>SuperCritical</td>
+            <td>Bengaluru</td>
+            <td>ATLAS phase 2</td>
+            <td>Discharge</td>
+            <td>INSMOMAD0107A074140E</td>
+            <td>MBX0007EF2B269162</td>
+            <td>eAuto</td>
+            <td>MAAS</td>
+            <td>Severe Over Dock +Ve Temperature</td>
+            <td>25</td>
+            <td>Severe over battery +ve Temperature</td>
+            <td>330</td>
+            <td>7/23/2024 0:07</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0107A2011E11</td>
+            <td>SuperCritical</td>
+            <td>Bengaluru</td>
+            <td>DP</td>
+            <td>Discharge</td>
+            <td>INSMOMAD0106L055F10E</td>
+            <td>SESEAG01202301001</td>
+            <td>eBike</td>
+            <td>MAAS</td>
+            <td>Severe Over Voltage - Cell</td>
+            <td>3</td>
+            <td>severe over voltage-cell1</td>
+            <td>163</td>
+            <td>7/23/2024 0:09</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0307C1175212</td>
+            <td>SuperCritical</td>
+            <td>Delhi</td>
+            <td>ATLAS</td>
+            <td>Discharge</td>
+            <td>INSMOMAD0107J1839A0E</td>
+            <td>P51EPHRMB24000033</td>
+            <td>eBike</td>
+            <td>MAAS</td>
+            <td>Severe Under Voltage - Cell</td>
+            <td>2</td>
+            <td>Severe Under Voltage - Cell</td>
+            <td>264</td>
+            <td>7/23/2024 0:11</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1007L14B1C13</td>
+            <td>SuperCritical</td>
+            <td>Bengaluru</td>
+            <td>ATLAS phase 2</td>
+            <td>Discharge</td>
+            <td>INSMOMAD0107A074960E</td>
+            <td>MBX0007EF2B267828</td>
+            <td>eAuto</td>
+            <td>MAAS</td>
+            <td>Severe Over temperature - Cell</td>
+            <td>3</td>
+            <td>Severe Over temperature - Cell</td>
+            <td>175</td>
+            <td>7/23/2024 0:12</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH1007L14B1A13</td>
+            <td>SuperCritical</td>
+            <td>Calicur</td>
+            <td>ATLAS phase 2</td>
+            <td>Discharge</td>
+            <td>INSMOMAD0107A075730E</td>
+            <td>MBX0007EF2B271531</td>
+            <td>eAuto</td>
+            <td>MAAS</td>
+            <td>Severe Over temperature - Cell</td>
+            <td>25</td>
+            <td>Severe over battery +ve Temperature</td>
+            <td>231</td>
+            <td>7/23/2024 0:29</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0107A2011911</td>
+            <td>SuperCritical</td>
+            <td>Gurugram</td>
+            <td>DP</td>
+            <td>Charge</td>
+            <td>0000WMQISXM1V1-00519</td>
+            <td>Dock -5</td>
+            <td></td>
+            <td></td>
+            <td>Severe Over Dock -Ve Temperature</td>
+            <td>0</td>
+            <td></td>
+            <td>322</td>
+            <td>7/23/2024 0:29</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

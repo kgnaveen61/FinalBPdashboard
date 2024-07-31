@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Not in swap details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-off {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-on {
+            background-color: #ffcccb;
+        }
+        .title-off {
+            background-color: #d3d3d3;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="index.html">
+        <button class="maindashboard-button">Main Dashboard</button>
+    </a>
+    <div class="right">
+        <button class="button">Date Range from - to </button>
+        <button class="button">Export</button>
+    </div>
+</div>
+
+<div class="section-title title-on">Battery Deployed details </div>
+<table>
+    <thead>
+        <tr>
+            <th>Battery ID</th>
+            <th>BP Type</th>
+            <th>Zone</th>
+            <th>Subzone</th>
+            <th>Zone Status</th>
+            <th>Field/Nonfield</th>
+            <th>BP Manufacture Date</th>
+            <th>Recorded Updated Date</th>
+            <th>BP Family</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>INSMOMAH0106G2502212</td>
+            <td>12</td>
+            <td>Bengaluru</td>
+            <td>Vehicle-Integration-Saera-Electric-Biwadi</td>
+            <td>Deployed</td>
+            <td>Non Field</td>
+            <td>9/22/2022</td>
+            <td>2/14/2024</td>
+            <td>Atlas</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0107A1803411</td>
+            <td>11</td>
+            <td>Delhi</td>
+            <td>Deployed</td>
+            <td>Deployed</td>
+            <td>Field</td>
+            <td>1/21/2023</td>
+            <td>5/20/2024</td>
+            <td>Gen2a</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0106G2802F12</td>
+            <td>12</td>
+            <td>Gurugram</td>
+            <td>ELRC</td>
+            <td>Deployed</td>
+            <td>Non Field</td>
+            <td>9/22/2022</td>
+            <td>5/21/2024</td>
+            <td>Atlas</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0106J2000711</td>
+            <td>11</td>
+            <td>Delhi</td>
+            <td>Deployed</td>
+            <td>Deployed</td>
+            <td>Fied</td>
+            <td>11/8/2022</td>
+            <td>7/5/2024</td>
+            <td>Gen2a</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0106J2000911</td>
+            <td>11</td>
+            <td>Bengaluru</td>
+            <td>Deployed</td>
+            <td>Deployed</td>
+            <td>Fied</td>
+            <td>11/8/2022</td>
+            <td>6/10/2024</td>
+            <td>Gen2a</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0106J2000A11</td>
+            <td>11</td>
+            <td>Ghaziabad</td>
+            <td>Deployed</td>
+            <td>Deployed</td>
+            <td>Field</td>
+            <td>11/9/2022</td>
+            <td>2/13/2024</td>
+            <td>Gen2a</td>
+        </tr>
+        <tr>
+            <td>INSMOMAH0107A1800511</td>
+            <td>11</td>
+            <td>Trivandrum</td>
+            <td>Bengaluru - ELRC</td>
+            <td>Deployed</td>
+            <td>Non Field</td>
+            <td>1/20/2023</td>
+            <td>5/16/2024</td>
+            <td>Gen2a</td>
+        </tr>
+    </tbody>
+</table>
+  
+</body>
+</html>
+

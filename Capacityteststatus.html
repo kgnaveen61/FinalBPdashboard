@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            height: 100vh;
+            margin: 40px;
+            background-color: #3b5473;
+            flex-direction: column;
+        }
+        .chart {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .donut {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        .donut1 {
+            background: conic-gradient(
+            rgb(237, 115, 62) 0% 40%,   /* Yellow color from 0% to 40% */
+            rgb(114, 236, 7) 40% 80%,     /* Red color from 0% to 40% */
+            rgb(248, 229, 24) 0% 20%   /* Yellow color from 0% to 20% */
+            );
+        }
+        
+        .donut::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .label {
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Change to space-between to push buttons to the sides */
+            align-items: center; /* Align items vertically */
+            margin-bottom: 20px;
+            width: 100%; /* Ensure full width */
+        }   
+
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+        .percentage {
+            position: absolute;
+            font-size: 26px;
+            font-weight: bold;
+            color: rgb(16, 15, 15);
+        }
+        .donut1 .percentage1 { top: 20%; left: 25%; } /* Yellow */
+        .donut1 .percentage2 { top: 40%; left: 70%; } /* Red */
+        .donut1 .percentage3 { top: 70%; left: 30%; } /* Green */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <div class="right">
+            <button class="button">Data View </button>
+            <button class="button">Graph View </button>
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+    <p style="color: rgb(236, 240, 243); text-align: center; font-size: 45px;">Capacity Test Status</p>
+    <div class="chart">
+        <div class="donut donut1">
+            
+            <div class="percentage percentage1">20(0.05%) </div>
+            <div class="percentage percentage2">19(0.05%)</div>
+            <div class="percentage percentage3">61(0.15%)</div>
+        </div>
+    
+    </div>
+    <a href="Batterycapacity.html" style="color: rgb(236, 240, 243); text-decoration: none; text-align: center; font-size: 45px;">Total Capacity Test completed 100 (0.25%)</a>
+
+</body>
+</html>

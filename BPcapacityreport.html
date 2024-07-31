@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Capacity Test Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .maindashboard-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .header .button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .header .right {
+            display: flex;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #e69dcf;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <div class="right">
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+
+    <div class="section-title">Battery Capacity Test Report</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>BP ID</th>
+                <th>Zone</th>
+                <th>Service Location</th>
+                <th>Station ID</th>
+                <th>Last Capacity Test Date & Time</th>
+                <th>Test Requirement Status</th>
+                <th>Reports</th>
+                <th>Capacity Test Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>INSMOMAH0106J1800111</td>
+                <td>Delhi</td>
+                <td>IOCL-Delhi-Abhishek-Motors-Paschim-Vihar</td>
+                <td>WMQISXM1V1-00378</td>
+                <td>7/20/2024 23:14</td>
+                <td>RED</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+            <tr>
+                <td>INSMOMAH0106J2000911</td>
+                <td>Bengaluru</td>
+                <td>Bengaluru-HSR-Somasunder-Palya2</td>
+                <td>WMQISXM1V1-00606</td>
+                <td>2/11/2024 22:10</td>
+                <td>GREEN</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+            <tr>
+                <td>INSMOMAH0106J2000A11</td>
+                <td>Gurugram</td>
+                <td>Gurugram-Saroj-Yadav</td>
+                <td>WMQISXM1V1-02041</td>
+                <td>6/21/2024 22:14</td>
+                <td>GREEN</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+            <tr>
+                <td>INSMOMAH0107A1800E11</td>
+                <td>Delhi</td>
+                <td>Delhi-Shadipur-Post</td>
+                <td>WMQISXM1V1-00148</td>
+                <td>7/14/2024 2:43</td>
+                <td>GREEN</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+            <tr>
+                <td>INSMOMAH0107A1801511</td>
+                <td>Delhi</td>
+                <td>Delhi-Qutab-Minar</td>
+                <td>WMQISXM1V1-00359</td>
+                <td>7/17/2024 1:31</td>
+                <td>GREEN</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+            <tr>
+                <td>INSMOMAH0107A1801D11</td>
+                <td>Bengaluru</td>
+                <td>IOCL-Bengaluru-Koramangala-Kaveri</td>
+                <td>WMQISXM1V1-00525</td>
+                <td>5/28/2024 21:00</td>
+                <td>GREEN</td>
+                <td>Test Reports</td>
+                <td>START</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

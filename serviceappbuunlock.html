@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Header and Cards</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #1E3A63; /* Background color for the entire body */
+        }
+
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 2fr;
+            gap: 10px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .card2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .card3 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .card4 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .img1{
+            width: 1000px;
+            height: 300px;
+        }
+        .img2{
+            width: 1000px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart">
+        <div class="header">
+            <a href="index.html">
+                <button class="maindashboard-button">Main Dashboard</button>
+            </a>
+            <h1 style="color: #1E3A63; text-align: center;">BLE Unlock Summary</h1>
+            <div class="right">
+                <button class="button">Graph View </button>
+                <button class="button">Date Range from - to </button>
+                <button class="button">Export</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <a href="BatteryUnlockservice.html">
+            <div class="card card1"><img src="img1.png" alt="imaage1" class="img1"></div>
+        </a>
+        <a href="BatteryUnlockSBA.html">
+            <div class="card card2"><img src="img2.png" alt="image" class="img1"></div>
+        </a>
+        <div class="card card3"><img src="img3.png" alt="image" class="img2"></div>
+        <div class="card card4"><img src="img4.png" alt="image" class="img2"></div>
+    </div>
+</body>
+</html>

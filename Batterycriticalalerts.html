@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery critical Alerts</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #2e5789;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #2e5789;
+        }
+
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .maindashboard-button, .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-size: 45px;
+            margin: 20px 0;
+            color: azure;
+            text-align: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: #2e5789;
+            border: 1px solid #2e5789;
+            display: flex;
+            font-size: 1.5rem;
+            padding: 0px;
+        }
+
+        .card1 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .card2 {
+            grid-column: 3 / 5;
+            grid-row: 1 / 3;
+        }
+
+        .card3 {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+        .img1{
+            width: 1250px;
+            height: 550px;
+        }
+        .img2{
+            width: 1250px;
+            height: 1160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <div class="section-title title-on">Battery critical Alerts</div>
+        <div class="right">
+            <button class="button">Graph View </button>
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+
+    
+
+    <div class="content">
+        <div class="card card1">
+            <img src="trend.png" alt="Trend" class="img1">
+
+        </div>
+        <div class="card card2">
+            <img src="BPalerts.png" alt="Trend" class="img2">
+
+        </div>
+        <div class="card card3">
+            <img src="count.png" alt="Trend"  class="img1">
+        </div>
+    </div>
+</body>
+</html>
