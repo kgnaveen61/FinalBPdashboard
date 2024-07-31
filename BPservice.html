@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #082d4d;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a0b7bb9;
+            color: #ffffff;
+        }
+        .header h1 {
+            margin: 0;
+            text-align: center;
+            flex: 1;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button, .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .maindashboard-button {
+            background-color: #45a049;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .chart {
+            width: 100%;
+            background-color: #082d4d;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .chart h1 {
+            color: aliceblue;
+            text-align: center;
+        }
+        .bar {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .bar div {
+            height: 20px;
+            color: rgb(245, 237, 237);
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .label {
+            width: 50px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .yellow {
+            background-color: rgb(236, 105, 45);
+        }
+        .black {
+            background-color: #082d4d;
+        }
+        .img1{
+            width: 1500px;
+        }
+        .img2{
+            width: 1500px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+        </a>
+        <h1>Battery Service Time</h1>
+        <div class="right">
+            <button class="button">Date Range from - to</button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        
+        <div class="chart">
+            <h1>Battery Service Time</h1>
+            <img src="Bpservice.png" alt="BpService" class="img1">
+        </div>
+    </div>
+    <div class="chart-container"> 
+        <div class="chart">
+            <h1>BP Periodic Summary</h1>
+            <img src="Bpservice2.png" alt="BpService" class="img2">
+        </div>
+    </div>
+</body>
+</html>

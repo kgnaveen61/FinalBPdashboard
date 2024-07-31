@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: top;
+            align-items: top;
+            height: 100vh;
+            margin: 0;
+            background-color: #082d4d;
+        }
+        .chart {
+            width: 100%;
+            height: 100%;
+            margin: 1%;
+        }
+        .bar {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .bar div {
+            height: 40px;
+
+        }
+        .label {
+            width: 50px;
+            text-align: right;
+            margin-right: 20px;
+        }
+        .orange {
+            background-color: rgb(240, 139, 56);
+        }
+        .green {
+            background-color: #59df1f;
+        }
+        .yellow {
+            background-color: rgb(225, 218, 9);
+        }
+        .bar div {
+            color: rgb(245, 237, 237);
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .right {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .legend{
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart">
+        <div class="header">
+            <a href="index.html">
+            <button class="maindashboard-button">Main Dashboard</button>
+            </a>
+            <h1 style="color: aliceblue; text-align: center;">Battery in Swap but TIU Not Communicating</h1>
+            <div class="right">
+                <button class="button">Data View </button>
+                <button class="button">Graph View </button>
+                <button class="button">Date Range from - to </button>
+                <button class="button">Export</button>
+            </div>
+        </div>
+        <h2 class="legend"> A Day Ago </h2>
+        <div class="bar">
+            <div class="orange" style="width:45%;color: rgb(15, 14, 14); ">3000 (7.5%)</div>
+            <div class="green" style="width: 35%;color: rgb(10, 10, 10);">2000(5.00%)</div>
+            <div class="yellow" style="width:20%;color: rgb(6, 6, 6);">1000(2.50%)</div>
+        </div>
+        <h2 class="legend"> < 3 Days Ago </h2>
+        <div class="bar">
+            <<div class="orange" style="width:25%;color: rgb(13, 12, 12); ">3000 (7.5%)</div>
+            <div class="green" style="width: 15%;color: rgb(13, 12, 12);">2000(5.00%)</div>
+            <div class="yellow" style="width:10%;color: rgb(3, 3, 3);">1000(2.50%)</div>
+        </div>
+        <h2 class="legend"> < 7 Days Ago</h2>
+        <div class="bar">
+            <div class="orange" style="width:14%;color: rgb(23, 22, 22); ">3000 (7.5%)</div>
+            <div class="green" style="width: 35%;color: rgb(4, 4, 4);">2000(5.00%)</div>
+            <div class="yellow" style="width:15%;color: rgb(27, 26, 26);">1000(2.50%)</div>
+        </div>
+        <h2 class="legend"> < 15 Days Ago</h2>
+        <div class="bar">
+            <div class="orange" style="width:9%;color: rgb(20, 18, 18); ">3000 (7.5%)</div>
+            <div class="green" style="width: 20%;color: rgb(8, 8, 8);">2000(5.00%)</div>
+            <div class="yellow" style="width:45%;color: rgb(1, 1, 1);">1000(2.50%)</div>
+        </div>
+        <h2 class="legend"> Month Ago </h2>
+        <div class="bar">
+            <div class="orange" style="width:10%;color: rgb(5, 5, 5); ">3000 (7.5%)</div>
+            <div class="green" style="width: 10%;color: rgb(11, 11, 11);">2000(5.00%)</div>
+            <div class="yellow" style="width:10%;color: rgb(10, 10, 10);">1000(2.50%)</div>
+        </div>
+        <h2 class="legend"> Year Ago </h2>
+        <div class="bar">
+            <div class="orange" style="width:9%;color: rgb(23, 22, 22); ">300 (0.75%)</div>
+            <div class="green" style="width: 12%;color: rgb(13, 13, 13);">200(0.50%)</div>
+            <div class="yellow" style="width:14%;color: rgb(18, 17, 17);">100(0.25%)</div>
+        </div>
+        <h2 class="legend"> Overall Invalid lat-long </h2>
+        <div class="bar">
+            <div class="orange" style="width:15%;color: rgb(16, 15, 15); ">1000 (2.50%)</div>
+            <div class="green" style="width: 15%;color: rgb(25, 24, 24);">800(0.20%)</div>
+            <div class="yellow" style="width:10%;color: rgb(5, 5, 5);">500(0.12%)</div>
+        </div>
+    </div>
+    
+</body>
+</html>
