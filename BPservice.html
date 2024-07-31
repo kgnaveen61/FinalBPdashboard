@@ -26,13 +26,13 @@
         }
         .header .right {
             display: flex;
-            gap: 10px;
+            gap: 5px;
         }
         .button, .maindashboard-button {
             background-color: #4CAF50; /* Green */
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 10px;
             text-decoration: none;
             font-size: 16px;
             cursor: pointer;
@@ -45,14 +45,14 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding: 20px;
+            padding: 10px;
         }
         .chart {
             width: 100%;
             background-color: #082d4d;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px; 
+            padding: 10px;
+            
         }
         .chart h1 {
             color: aliceblue;
@@ -67,7 +67,7 @@
             height: 20px;
             color: rgb(245, 237, 237);
             display: flex;
-            font-size: 20px;
+            font-size: 12px;
             justify-content: center;
             align-items: center;
         }
@@ -83,11 +83,43 @@
             background-color: #082d4d;
         }
         .img1{
-            width: 1500px;
+            width: 100%;
+            height: 300px;
         }
-        .img2{
-            width: 1500px;
-            height: 600px;
+        .header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+        .cell {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 20px;
+            margin: 10px;
+            width: 100px;
+            height: 80px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .cell.error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+        .cell h3 {
+            margin-top: 0;
+            font-size: 12px;
+        }
+        .cell p {
+            margin: 5px 0;
+        }
+        .button-container {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -96,7 +128,7 @@
         <a href="index.html">
             <button class="maindashboard-button">Main Dashboard</button>
         </a>
-        <h1>Battery Service Time</h1>
+        <a href="batteryservicetime.html" style="text-decoration: none;"><h1>Battery Service Time</h1></a>
         <div class="right">
             <button class="button">Date Range from - to</button>
             <button class="button">Export</button>
@@ -106,14 +138,100 @@
     <div class="chart-container">
         
         <div class="chart">
-            <h1>Battery Service Time</h1>
+            
             <img src="Bpservice.png" alt="BpService" class="img1">
         </div>
     </div>
     <div class="chart-container"> 
         <div class="chart">
-            <h1>BP Periodic Summary</h1>
-            <img src="Bpservice2.png" alt="BpService" class="img2">
+            <div class="header">
+                <a href="BPperiodicdata.html" style="text-decoration: none;"><h1>BP Periodic Summary</h1></a>
+                <h3>Zone: Delhi &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Station ID : WMQISXM1V1-00091 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Number of BP Available : 12
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Last Internet connected : 12:10 PM &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Last Refreshed : 12:10PM
+                </h3>
+            </div>
+        
+            <div class="container">
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 90 Ω:no: </p>
+                    <p>BPId: INSMOMAHD---</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 91 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD0--</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 92 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell error">
+                    <h3>SOC: -1.0%</h3>
+                    <p>BattAdrs: 93 Ω:no:</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell">
+                    <h3>100.0%</h3>
+                    <p>Batt Adrs: 94 Ω:no: 0</p>
+                    <p>INSMOMAHD---</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 90 Ω:no: </p>
+                    <p>BPId: INSMOMAHD---</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 91 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD0--</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 92 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell error">
+                    <h3>SOC: -1.0%</h3>
+                    <p>BattAdrs: 93 Ω:no:</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell">
+                    <h3>100.0%</h3>
+                    <p>Batt Adrs: 94 Ω:no: 0</p>
+                    <p>INSMOMAHD---</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 90 Ω:no: </p>
+                    <p>BPId: INSMOMAHD---</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 91 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD0--</p>
+                </div>
+                <div class="cell">
+                    <h3>SOC: 100.0%</h3>
+                    <p>BattAdrs: 92 Ω:no: 0</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell error">
+                    <h3>SOC: -1.0%</h3>
+                    <p>BattAdrs: 93 Ω:no:</p>
+                    <p>BPId: INSMOMAHD00---</p>
+                </div>
+                <div class="cell">
+                    <h3>100.0%</h3>
+                    <p>Batt Adrs: 94 Ω:no: 0</p>
+                    <p>INSMOMAHD---</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
