@@ -6,86 +6,108 @@
     <title>Stacked Bar Chart</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: top;
-            align-items: top;
-            height: 100vh;
-            margin: 0;
-            background-color: #082d4d;
-        }
-        .chart {
-            width: 100%;
-            height: 100%;
-            margin: 1%;
-        }
-        .bar {
-            display: flex;
-            margin-bottom: 10px;
-        }
-        .bar div {
-            height: 40px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensure header and chart stack vertically */
+    justify-content: flex-start; /* Align items at the start */
+    align-items: stretch; /* Ensure children take full width */
+    height: 100vh;
+    margin: 0;
+    background-color: #082d4d;
+}
 
-        }
-        .label {
-            width: 50px;
-            text-align: right;
-            margin-right: 20px;
-        }
-        .orange {
-            background-color: rgb(240, 139, 56);
-        }
-        .green {
-            background-color: #59df1f;
-        }
-        .yellow {
-            background-color: rgb(225, 218, 9);
-        }
-        .bar div {
-            color: rgb(245, 237, 237);
-            display: flex;
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-        .maindashboard-button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: right;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-left: 10px; /* Adjust as needed */
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .header .right {
-            display: flex;
-            gap: 20px;
-        }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: rgb(5, 0, 0);
-            padding: 10px 20px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .legend{
-            text-decoration: none;
-            color: aliceblue;
-        }
+.chart {
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust height to account for the header */
+    margin: 1%;
+    overflow-y: auto; /* Add scroll if needed */
+}
+
+.bar {
+    display: flex;
+    margin-bottom: 5px; /* Reduce the space between bars */
+}
+
+.bar div {
+    height: 30px;
+}
+
+.label {
+    width: 50px;
+    text-align: right;
+    margin-right: 10px; /* Reduce margin between label and bar */
+}
+
+.orange {
+    background-color: rgb(240, 139, 56);
+}
+
+.green {
+    background-color: #59df1f;
+}
+
+.yellow {
+    background-color: rgb(225, 218, 9);
+}
+
+.white {
+    background-color: #082d4d; /* Define white color */
+}
+
+.bar div {
+    color: rgb(245, 237, 237);
+    display: flex;
+    font-size: 14px; /* Reduce font size to fit better */
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Reduce gap between text and bar edges */
+}
+
+.maindashboard-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px; /* Adjust padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduce font size */
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Reduce margin below header */
+    padding: 0 10px; /* Add padding to the header */
+}
+
+.header .right {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: rgb(5, 0, 0);
+    padding: 8px 16px; /* Adjust padding */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduce font size */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.legend {
+    text-decoration: none;
+    color: rgb(242, 244, 246);
+    font-size: 14px; /* Reduce font size for the legend */
+}
+
     </style>
 </head>
 <body>
@@ -94,7 +116,7 @@
             <a href="index.html">
             <button class="maindashboard-button">Main Dashboard</button>
             </a>
-            <h1 style="color: aliceblue; text-align: center;">Battery in Swap but TIU Not Communicating</h1>
+            <a href="BPinswaptiunitcommunicating.html" style="text-decoration: none;"><h1 style="color: aliceblue;  text-align: center;">Zone wise Battery Status</h1> </a>
             <div class="right">
                 <button class="button">Data View </button>
                 <button class="button">Graph View </button>
@@ -102,47 +124,119 @@
                 <button class="button">Export</button>
             </div>
         </div>
-        <h2 class="legend"> A Day Ago </h2>
+        
         <div class="bar">
-            <div class="orange" style="width:45%;color: rgb(15, 14, 14); ">3000 (7.5%)</div>
-            <div class="green" style="width: 35%;color: rgb(10, 10, 10);">2000(5.00%)</div>
-            <div class="yellow" style="width:20%;color: rgb(6, 6, 6);">1000(2.50%)</div>
+            <h2 class="legend"> Delhi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <div class="green" style="width:35%;color: rgb(15, 14, 14); ">6,759</div>
+            <div class="yellow" style="width: 3%;color: rgb(10, 10, 10);">59</div>
+            <div class="orange" style="width:30%;color: rgb(6, 6, 6);">6,035</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">12,853 (32.13%)</div>
         </div>
-        <h2 class="legend"> < 3 Days Ago </h2>
         <div class="bar">
-            <<div class="orange" style="width:25%;color: rgb(13, 12, 12); ">3000 (7.5%)</div>
-            <div class="green" style="width: 15%;color: rgb(13, 12, 12);">2000(5.00%)</div>
-            <div class="yellow" style="width:10%;color: rgb(3, 3, 3);">1000(2.50%)</div>
+            <h2 class="legend">Gurugram &nbsp; </h2>
+            <div class="green" style="width:35%;color: rgb(15, 14, 14); ">6,203</div>
+            <div class="yellow" style="width: 0%;color: rgb(10, 10, 10);"></div>
+            <div class="orange" style="width:30%;color: rgb(6, 6, 6);">5,807</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">12,012 (30.13%)</div>
         </div>
-        <h2 class="legend"> < 7 Days Ago</h2>
         <div class="bar">
-            <div class="orange" style="width:14%;color: rgb(23, 22, 22); ">3000 (7.5%)</div>
-            <div class="green" style="width: 35%;color: rgb(4, 4, 4);">2000(5.00%)</div>
-            <div class="yellow" style="width:15%;color: rgb(27, 26, 26);">1000(2.50%)</div>
+            <h2 class="legend">Bengalore &nbsp; </h2>
+            <div class="green" style="width:5%;color: rgb(15, 14, 14); ">795</div>
+            <div class="yellow" style="width: 25%;color: rgb(10, 10, 10);">4,759</div>
+            <div class="orange" style="width:20%;color: rgb(6, 6, 6);">2,699</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">8,253 (20.65%)</div>
         </div>
-        <h2 class="legend"> < 15 Days Ago</h2>
         <div class="bar">
-            <div class="orange" style="width:9%;color: rgb(20, 18, 18); ">3000 (7.5%)</div>
-            <div class="green" style="width: 20%;color: rgb(8, 8, 8);">2000(5.00%)</div>
-            <div class="yellow" style="width:45%;color: rgb(1, 1, 1);">1000(2.50%)</div>
+            <h2 class="legend">Noida &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <div class="green" style="width:5%;color: rgb(15, 14, 14); ">686</div>
+            <div class="yellow" style="width: 0%;color: rgb(10, 10, 10);"></div>
+            <div class="orange" style="width:8%;color: rgb(6, 6, 6);">733</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">1,420 (3.65%)</div>
         </div>
-        <h2 class="legend"> Month Ago </h2>
         <div class="bar">
-            <div class="orange" style="width:10%;color: rgb(5, 5, 5); ">3000 (7.5%)</div>
-            <div class="green" style="width: 10%;color: rgb(11, 11, 11);">2000(5.00%)</div>
-            <div class="yellow" style="width:10%;color: rgb(10, 10, 10);">1000(2.50%)</div>
+            <h2 class="legend">Faridabad &nbsp;&nbsp;</h2>
+            <div class="green" style="width:4%;color: rgb(15, 14, 14); ">474</div>
+            <div class="yellow" style="width: 0%;color: rgb(10, 10, 10);"></div>
+            <div class="orange" style="width:8%;color: rgb(6, 6, 6);">848</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">1,322 (3.30%)</div>
         </div>
-        <h2 class="legend"> Year Ago </h2>
         <div class="bar">
-            <div class="orange" style="width:9%;color: rgb(23, 22, 22); ">300 (0.75%)</div>
-            <div class="green" style="width: 12%;color: rgb(13, 13, 13);">200(0.50%)</div>
-            <div class="yellow" style="width:14%;color: rgb(18, 17, 17);">100(0.25%)</div>
+            <h2 class="legend">Chandigrah &nbsp;&nbsp;</h2>
+            <div class="green" style="width:0%;color: rgb(15, 14, 14); "></div>
+            <div class="yellow" style="width: 6%;color: rgb(10, 10, 10);">1,400</div>
+            <div class="orange" style="width:2%;color: rgb(6, 6, 6);">62</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">1,322 (3.30%)</div>
         </div>
-        <h2 class="legend"> Overall Invalid lat-long </h2>
         <div class="bar">
-            <div class="orange" style="width:15%;color: rgb(16, 15, 15); ">1000 (2.50%)</div>
-            <div class="green" style="width: 15%;color: rgb(25, 24, 24);">800(0.20%)</div>
-            <div class="yellow" style="width:10%;color: rgb(5, 5, 5);">500(0.12%)</div>
+            <h2 class="legend">Ghaziabad &nbsp;&nbsp;</h2>
+            <div class="green" style="width:4%;color: rgb(15, 14, 14); ">535</div>
+            <div class="yellow" style="width: 0%;color: rgb(10, 10, 10);"></div>
+            <div class="orange" style="width:3%;color: rgb(6, 6, 6);">390</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">1,322 (3.30%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend"> Hyderabad &nbsp;&nbsp;</h2>
+            <div class="green" style="width:0%;color: rgb(15, 14, 14); "></div>
+            <div class="yellow" style="width: 6%;color: rgb(10, 10, 10);">895</div>
+            <div class="orange" style="width:0%;color: rgb(6, 6, 6);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">895 (2.24%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <div class="yellow" style="width: 5%;color: rgb(10, 10, 10);">420</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">420 (1.05%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Trivendrum &nbsp; </h2>
+            <div class="yellow" style="width: 4%;color: rgb(10, 10, 10);">282</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">282 (0.75%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Mumbai &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="yellow" style="width: 3%;color: rgb(10, 10, 10);">222</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">222 (0.56%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Kochi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="yellow" style="width: 2%;color: rgb(10, 10, 10);">180</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">180 (0.46%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Vijaywada &nbsp;&nbsp;</h2>
+            <div class="yellow" style="width: 1.5%;color: rgb(10, 10, 10);">142</div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">142 (0.36%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Sonipat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="green" style="width:.5%;color: rgb(15, 14, 14); "></div>
+            <div class="orange" style="width:.5%;color: rgb(6, 6, 6);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">106 (0.27%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Pune &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="yellow" style="width: .50%;color: rgb(10, 10, 10);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">70 (0.18%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Panipath&nbsp;&nbsp;&nbsp; </h2>
+            <div class="green" style="width:.3%;color: rgb(15, 14, 14); "></div>
+            <div class="orange" style="width:.3%;color: rgb(6, 6, 6);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">66 (0.16%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Nashik &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="orange" style="width: .30%;color: rgb(10, 10, 10);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">16 (0.02%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Panchakula &nbsp; </h2>
+            <div class="yellow" style="width: .30%;color: rgb(10, 10, 10);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">15 (0.02%)</div>
+        </div>
+        <div class="bar">
+            <h2 class="legend">Mohali &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+            <div class="yellow" style="width: .20%;color: rgb(10, 10, 10);"></div>
+            <div class="white" style="width:6%;color: rgb(255, 250, 250);">5 (0.00%)</div>
         </div>
     </div>
     
