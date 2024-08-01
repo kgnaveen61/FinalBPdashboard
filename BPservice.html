@@ -26,10 +26,10 @@
         }
         .header .right {
             display: flex;
-            gap: 5px;
+            gap: 2px;
         }
         .button, .maindashboard-button {
-            background-color: #4CAF50; /* Green */
+            background-color: #046808; /* Green */
             border: none;
             color: white;
             padding: 5px 10px;
@@ -39,20 +39,27 @@
             border-radius: 5px;
         }
         .maindashboard-button {
-            background-color: #45a049;
+            background-color: #036908;
         }
         .chart-container {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 400px; /* Adjust as needed to fit the image height */
+            background-color: #082d4d; /* Ensure the background color matches */
             padding: 10px;
+        }
+        .img1 {
+            width: 100%; /* Ensure image scales properly */
+            height: 350px; /* Maintain aspect ratio */
         }
         .chart {
             width: 100%;
             background-color: #082d4d;
             border-radius: 5px; 
             padding: 10px;
-            
+            height: 450px;
+            text-align: center;
         }
         .chart h1 {
             color: aliceblue;
@@ -60,11 +67,11 @@
         }
         .bar {
             display: flex;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             align-items: center;
         }
         .bar div {
-            height: 20px;
+            height: 15px;
             color: rgb(245, 237, 237);
             display: flex;
             font-size: 12px;
@@ -82,28 +89,25 @@
         .black {
             background-color: #082d4d;
         }
-        .img1{
-            width: 100%;
-            height: 300px;
-        }
         .header {
-            background-color: #28a745;
+            background-color: #082d4d;
             color: white;
+            height: 20px;
             padding: 20px;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 10px;
+            margin: 5px;
         }
         .cell {
             background-color: #d4edda;
             border: 1px solid #c3e6cb;
-            padding: 20px;
+            padding: 10px;
             margin: 10px;
-            width: 200px;
-            height: 170px;
+            width: 180px;
+            height: 100px;
             font-size: 12px;
             border-radius: 5px;
         }
@@ -128,7 +132,7 @@
         <a href="index.html">
             <button class="maindashboard-button">Main Dashboard</button>
         </a>
-        <a href="batteryservicetime.html" style="text-decoration: none;"><h1>Battery Service Time</h1></a>
+        <a href="batteryservicetime.html" style="text-decoration: none;color: aliceblue;"><h1>Battery Service Time</h1></a>
         <div class="right">
             <button class="button">Date Range from - to</button>
             <button class="button">Export</button>
@@ -136,43 +140,41 @@
     </div>
 
     <div class="chart-container">
-        
-        <div class="chart">
-            
+        <div>
             <img src="Bpservice.png" alt="BpService" class="img1">
         </div>
     </div>
     <div class="chart-container"> 
         <div class="chart">
-            <div class="header">
-                <a href="BPperiodicdata.html" style="text-decoration: none;"><h1>BP Periodic Summary</h1></a>
-                <h3>Zone: Delhi &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Station ID : WMQISXM1V1-00091 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Number of BP Available : 12
-                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Last Internet connected : 12:10 PM &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Last Refreshed : 12:10PM
-                </h3>
+            <div>
+                <a href="BPperiodicdata.html" style="text-decoration: none; "><h1>BP Periodic Summary</h1></a>
             </div>
+            <div class="right">
+                <button class="button">Zone: Delhi</button>
+                <button class="button">Station ID : WMQISXM1V1-00091</button>
+                <button class="button">Date Range from -- to</button>
+            </div>
+            
         
-           <div class="container">
+    <div class="container">
         <div class="cell">
             <h3>100.0%</h3>
             <p>24.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>56.1V</p>
+            <p>0.0A | CE | 1 | 56.1V</p>
             <p>Batt Adrs: 90 Ω:no: 25</p>
             <p>INSMOMAHD000000000000</p>
         </div>
         <div class="cell error">
             <h3>99.0%</h3>
             <p>35.0°C</p>
-            <p>7.0A | CV | 1</p>
-            <p>56.0V</p>
+            <p>7.0A | CV | 1 | 56.0V</p>
             <p>Batt Adrs: 91 Ω:no: 0</p>
             <p>INSMOMAHD206K19821</p>
         </div>
         <div class="cell">
             <h3>100.0%</h3>
             <p>25.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>55.9V</p>
+            <p>0.0A | CE | 1 | 55.9V</p>
             <p>Batt Adrs: 92 Ω:no: 0</p>
             <p>INSMOMAHA206G22787</p>
         </div>
@@ -180,15 +182,13 @@
             <h3>X BP_QUARANTINE</h3>
             <p>-1.0%</p>
             <p>-1.0°C</p>
-            <p>-1.0A</p>
-            <p>-1.0V</p>
+            <p>-1.0A </p>
             <p>INSMOMAHD000000000000</p>
         </div>
         <div class="cell">
             <h3>100.0%</h3>
             <p>27.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>55.8V</p>
+            <p>0.0A | CE | 1 | 55.8V</p>
             <p>Batt Adrs: 93 Ω:no: 0</p>
             <p>INSMOMAHD90501402511</p>
         </div>
@@ -197,24 +197,21 @@
         <div class="cell">
             <h3>100.0%</h3>
             <p>24.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>56.1V</p>
+            <p>0.0A | CE | 1 | 56.1V</p>
             <p>Batt Adrs: 90 Ω:no: 25</p>
             <p>INSMOMAHD000000000000</p>
         </div>
         <div class="cell error">
             <h3>99.0%</h3>
             <p>35.0°C</p>
-            <p>7.0A | CV | 1</p>
-            <p>56.0V</p>
+            <p>7.0A | CV | 1 | 56.0V</p>
             <p>Batt Adrs: 91 Ω:no: 0</p>
             <p>INSMOMAHD206K19821</p>
         </div>
         <div class="cell">
             <h3>100.0%</h3>
             <p>25.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>55.9V</p>
+            <p>0.0A | CE | 1 | 55.9V</p>
             <p>Batt Adrs: 92 Ω:no: 0</p>
             <p>INSMOMAHA206G22787</p>
         </div>
@@ -222,59 +219,53 @@
             <h3>X BP_QUARANTINE</h3>
             <p>-1.0%</p>
             <p>-1.0°C</p>
-            <p>-1.0A</p>
-            <p>-1.0V</p>
+            <p>-1.0A </p>
             <p>INSMOMAHD000000000000</p>
         </div>
         <div class="cell">
             <h3>100.0%</h3>
             <p>27.0°C</p>
-            <p>0.0A | CE | 1</p>
-            <p>55.8V</p>
+            <p>0.0A | CE | 1 | 55.8V</p>
             <p>Batt Adrs: 93 Ω:no: 0</p>
             <p>INSMOMAHD90501402511</p>
         </div>
-        <div class="container">
-            <div class="cell">
-                <h3>100.0%</h3>
-                <p>24.0°C</p>
-                <p>0.0A | CE | 1</p>
-                <p>56.1V</p>
-                <p>Batt Adrs: 90 Ω:no: 25</p>
-                <p>INSMOMAHD000000000000</p>
-            </div>
-            <div class="cell error">
-                <h3>99.0%</h3>
-                <p>35.0°C</p>
-                <p>7.0A | CV | 1</p>
-                <p>56.0V</p>
-                <p>Batt Adrs: 91 Ω:no: 0</p>
-                <p>INSMOMAHD206K19821</p>
-            </div>
-            <div class="cell">
-                <h3>100.0%</h3>
-                <p>25.0°C</p>
-                <p>0.0A | CE | 1</p>
-                <p>55.9V</p>
-                <p>Batt Adrs: 92 Ω:no: 0</p>
-                <p>INSMOMAHA206G22787</p>
-            </div>
-            <div class="cell error">
-                <h3>X BP_QUARANTINE</h3>
-                <p>-1.0%</p>
-                <p>-1.0°C</p>
-                <p>-1.0A</p>
-                <p>-1.0V</p>
-                <p>INSMOMAHD000000000000</p>
-            </div>
-            <div class="cell">
-                <h3>100.0%</h3>
-                <p>27.0°C</p>
-                <p>0.0A | CE | 1</p>
-                <p>55.8V</p>
-                <p>Batt Adrs: 93 Ω:no: 0</p>
-                <p>INSMOMAHD90501402511</p>
-            </div>
+    </div>
+    <div class="container">
+        <div class="cell">
+            <h3>100.0%</h3>
+            <p>24.0°C</p>
+            <p>0.0A | CE | 1 | 56.1V</p>
+            <p>Batt Adrs: 90 Ω:no: 25</p>
+            <p>INSMOMAHD000000000000</p>
         </div>
+        <div class="cell error">
+            <h3>99.0%</h3>
+            <p>35.0°C</p>
+            <p>7.0A | CV | 1 | 56.0V</p>
+            <p>Batt Adrs: 91 Ω:no: 0</p>
+            <p>INSMOMAHD206K19821</p>
+        </div>
+        <div class="cell">
+            <h3>100.0%</h3>
+            <p>25.0°C</p>
+            <p>0.0A | CE | 1 | 55.9V</p>
+            <p>Batt Adrs: 92 Ω:no: 0</p>
+            <p>INSMOMAHA206G22787</p>
+        </div>
+        <div class="cell error">
+            <h3>X BP_QUARANTINE</h3>
+            <p>-1.0%</p>
+            <p>-1.0°C</p>
+            <p>-1.0A </p>
+            <p>INSMOMAHD000000000000</p>
+        </div>
+        <div class="cell">
+            <h3>100.0%</h3>
+            <p>27.0°C</p>
+            <p>0.0A | CE | 1 | 55.8V</p>
+            <p>Batt Adrs: 93 Ω:no: 0</p>
+            <p>INSMOMAHD90501402511</p>
+        </div>
+    </div>
 </body>
 </html>
