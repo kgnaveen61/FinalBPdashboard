@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firmware Update</title>
+    <title>Capacity Test Update</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,8 +23,8 @@
         .label {
             position: absolute;
             font-size: 20px;
-            top: 20%;
-            left: 20%;
+            top: 10%;
+            left: 10%;
             transform: translate(-50%, -50%);
             font-weight: bold;
         }
@@ -78,11 +78,16 @@
             <button class="button">Export</button>
         </div>
     </div>
-    <p style="color: rgb(236, 240, 243); text-align: center; font-size: 45px;">Capacity Test Status</p>
+    <p style="color: rgb(236, 240, 243); text-align: center; font-size: 35px;">Capacity Test Status</p>
     <div class="chart">
             <img src="Capacity.png" alt="Capacity Test Status Image">
         </div>
     </div>
-    <a href="Batterycapacity.html" style="color: rgb(236, 240, 243); text-decoration: none; text-align: center; font-size: 45px;">Total Capacity Test completed 200 (0.50%)</a>
+    <a href="Batterycapacity.html" style="color: rgb(236, 240, 243); text-decoration: none; text-align: center; font-size: 25px;">Total Capacity Test Attempted 200 (100%)</a>
+    <p></p>
+    <div style="display: flex; align-items: center;">
+        <a href="Batterycapacity.html" style="color: rgb(236, 240, 243); text-decoration: none; font-size: 20px; margin-right: 10px;">Test completed 170 (0.85%)</a>
+        <a href="Batterycapacity.html" style="color: rgb(234, 87, 53); text-decoration: none; font-size: 20px;">Test Failed 30 (0.15%)</a>
+    </div>
 </body>
 </html>
